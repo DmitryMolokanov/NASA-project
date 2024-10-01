@@ -1,0 +1,17 @@
+@import '../../../global.scss';
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: $header-height;
+    background-color:$prime-header-bgcolor;
+    color: $header-text-color;
+}
+
+.menuContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}

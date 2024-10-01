@@ -1,0 +1,14 @@
+@import '../../../../global.scss';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-right: 20%;
+}
+.link {
+    color: lightgray;
+    &:hover {
+        color: $color-hover-red;
+    }
+}
