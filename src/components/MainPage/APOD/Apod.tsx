@@ -1,39 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import cls from './Apod.module.scss'
+import { IApod } from '../../../types/apod';
+import loader from '../../../../public/assets/img/loader.gif'
+import ApodMainInfo from './ApodMainInfo';
 
-interface IApod {
-    date: string
-    explanation: string
-    media_type: string
-    service_version: string
-    title: string
-    url: string
+
+interface ApodProps {
+    apodData: IApod
+    loading: boolean
 }
 
-const Apod = () => {
-
-    const [apodData, setApodData] = useState<IApod | null>(null)
-
-    useEffect(() => {
-        const apodFetch = async () => {
-            const response = await fetch(`https://api.nasa.gov/planetary/apod?date=2024-09-05&api_key=${process.env.REACT_APP_API_KEY}`)
-            const result = await response.json()
-            setApodData(result)
-        }
-        apodFetch()
-    }, [])
+const Apod = ({ apodData, loading }: ApodProps) => {
 
     return (
         <div className={cls.apodContainer}>
             <div className={cls.title}>
                 <h1>Astronomy Picture of the Day</h1>
             </div>
-            <div className={cls.explanation}>
-                <span>{apodData?.explanation}</span>
-            </div>
-            {apodData?.media_type === 'video'
-                ? <iframe className={cls.iframe} src={apodData?.url} />
-                : <img src={apodData?.url} alt='Astronomy Picture of the Day' />}
+
+            {loading
+                ? <img src={loader} alt='loading...' />
+                : <ApodMainInfo apodData={apodData} />}
+
+
         </div>
     )
 };

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
 
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     return (
         <div className={cls.navbar}>
             <AppLink to={'/main_page'} ClassName={cls.link}>{t("Main page")}</AppLink>

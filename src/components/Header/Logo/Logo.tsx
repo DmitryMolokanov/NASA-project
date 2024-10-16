@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import cls from './Logo.module.scss'
 import AppLink from '../../Link/AppLink';
 import logo from '../../../../public/assets/img/logo.png'

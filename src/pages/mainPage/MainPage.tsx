@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header/Header';
-import Apod from '../../components/MainPage/APOD/Apod';
+import ContentContainer from '../../components/MainPage/ContentContainer/contentContainer';
 
 
 const MainPage = () => {
@@ -8,7 +8,7 @@ const MainPage = () => {
     return (
         <div>
             <Header />
-            <Apod />
+            <ContentContainer />
         </div>
     )
 };
