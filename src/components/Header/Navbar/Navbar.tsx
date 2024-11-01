@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <div className={cls.navbar}>
             <AppLink to={'/main_page'} ClassName={cls.link}>{t("Main page")}</AppLink>
-            <AppLink to={'#'} ClassName={cls.link}>{t("About")}</AppLink>
+            <AppLink to={'/mars_page'} ClassName={cls.link}>{t("Mars")}</AppLink>
         </div>
     )
 };

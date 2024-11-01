@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import cls from './contentContainer.module.scss'
 import Apod from '../APOD/Apod';
-import Datepicker from '../../Datepicker/Datepicker';
-import { convertedDate } from '../../utils/strings/convertedDate';
-import { IApod } from '../../../types/apod';
+import Datepicker from '../../../../components/Datepicker/Datepicker';
+import { IApod } from '../../../../types/apod';
+import { dalyPhoto } from '../../../../api/dalyPhoto';
 
 
 const contentContainer = () => {
@@ -14,9 +14,7 @@ const contentContainer = () => {
 
     const apodFetch = async (date: Date) => {
         setLoading(true)
-        const dateApi = convertedDate(date)
-        const response = await fetch(`https://api.nasa.gov/planetary/apod?date=${dateApi}&api_key=${process.env.REACT_APP_API_KEY}`)
-        const result = await response.json()
+        const result = await dalyPhoto(date)
         setLoading(false)
         setApodData(result)
     }

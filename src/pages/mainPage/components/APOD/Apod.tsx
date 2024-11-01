@@ -1,7 +1,7 @@
 import React from 'react';
 import cls from './Apod.module.scss'
-import { IApod } from '../../../types/apod';
-import loader from '../../../../public/assets/img/loader.gif'
+import { IApod } from '../../../../types/apod';
+import loader from '../../../../../public/assets/img/loader.gif'
 import ApodMainInfo from './ApodMainInfo';
 
 

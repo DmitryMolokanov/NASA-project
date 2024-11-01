@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header/Header';
-import ContentContainer from '../../components/MainPage/ContentContainer/contentContainer';
+import ContentContainer from './components/ContentContainer/contentContainer';
 
 
 const MainPage = () => {

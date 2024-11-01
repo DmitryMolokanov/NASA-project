@@ -43,6 +43,7 @@
     "react-datepicker": "^7.4.0",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.2",
+    "react-paginate": "^8.2.0",
     "react-router-dom": "^6.26.2",
     "three": "^0.168.0",
     "typescript-plugin-css-modules": "^5.1.0"
