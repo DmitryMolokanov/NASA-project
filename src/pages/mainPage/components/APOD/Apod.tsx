@@ -3,6 +3,7 @@ import cls from './Apod.module.scss'
 import { IApod } from '../../../../types/apod';
 import loader from '../../../../../public/assets/img/loader.gif'
 import ApodMainInfo from './ApodMainInfo';
+import Loader from '../../../../components/Loader/Loader';
 
 
 interface ApodProps {
@@ -19,7 +20,7 @@ const Apod = ({ apodData, loading }: ApodProps) => {
             </div>
 
             {loading
-                ? <img src={loader} alt='loading...' />
+                ? <Loader />
                 : <ApodMainInfo apodData={apodData} />}
 
 
