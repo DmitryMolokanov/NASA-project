@@ -5,16 +5,22 @@ import { IMarsPhoto } from "../../../../types/mars"
 
 interface MainMarsContainerProps {
     marsPhoto: IMarsPhoto[]
+    setSelectPhoto: (el: IMarsPhoto) => void
+    setIsShown: (el: boolean) => void
 }
 
-const MainMarsContainer = ({ marsPhoto }: MainMarsContainerProps) => {
+const MainMarsContainer = ({ marsPhoto, setSelectPhoto, setIsShown }: MainMarsContainerProps) => {
+
+    const selectPhoto = (photo: IMarsPhoto) => {
+        setSelectPhoto(photo)
+        setIsShown(true)
+    }
 
     return (
         <div>
             <div className={cls.photoContainer}>
-
                 {marsPhoto.map((item) => {
-                    return <div className={cls.photo} key={item.id}>
+                    return <div className={cls.photo} key={item.id} onClick={() => selectPhoto(item)}>
                         <img src={item.img_src} alt="mars_img" />
                     </div>
                 })}

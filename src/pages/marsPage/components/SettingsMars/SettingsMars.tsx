@@ -5,10 +5,11 @@ import Button from '../../../../components/Button/Button';
 interface SettingsMarsProps {
     totalSolCount: number
     setSol: (el: number) => void
+    setRoverName: (el: string) => void
 }
 
 
-const SettingsMars: FC<SettingsMarsProps> = ({ totalSolCount, setSol }) => {
+const SettingsMars: FC<SettingsMarsProps> = ({ totalSolCount, setSol, setRoverName }) => {
 
     const [solValue, setSolValue] = useState<number | ''>('')
     const [error, setError] = useState<string>('')
@@ -46,6 +47,19 @@ const SettingsMars: FC<SettingsMarsProps> = ({ totalSolCount, setSol }) => {
                     {error && <span className={cls.errValue}>{error}</span>}
                 </div>
             </div>
+            <div>
+                <div className={cls.setSolContainer}>
+                    <label className={cls.solInputLabel}>Select rover</label>
+                    <select className={cls.roverSelect} onChange={(e) => setRoverName(e.target.value)}>
+                        <option value="curiosity">Curiosity</option>
+                        <option value="perseverance">Perseverance</option>
+                    </select>
+                </div>
+                <div className={cls.errContainer}>
+                    {error && <span className={cls.errValue}>{error}</span>}
+                </div>
+            </div>
+
         </div>
     )
 };
