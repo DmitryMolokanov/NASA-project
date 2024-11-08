@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import "react-datepicker/dist/react-datepicker.module.css"
 import cls from './Datepicker.module.scss'
 import DatePicker from 'react-datepicker';
+import { useTranslation } from 'react-i18next';
 
 interface DatepickerProps {
     startDate: Date
@@ -10,14 +11,15 @@ interface DatepickerProps {
 
 const Datepicker: FC<DatepickerProps> = ({ startDate, setStartDate }) => {
 
+    const { t } = useTranslation()
+
     const convertDate = (date: Date) => {
         setStartDate(date)
     }
 
-
     return (
         <div className={cls.mainContainer}>
-            <div className={cls.title}>You can choose other dates and get new images.</div>
+            <div className={cls.title}>{t('You can choose other dates and get new images.')}</div>
             <DatePicker
                 selected={startDate}
                 onChange={(date: any) => convertDate(date)}

@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react'
 import cls from './SettingsMars.module.scss'
 import Button from '../../../../components/Button/Button';
+import { useTranslation } from 'react-i18next';
 
 interface SettingsMarsProps {
     totalSolCount: number
@@ -13,6 +14,8 @@ const SettingsMars: FC<SettingsMarsProps> = ({ totalSolCount, setSol, setRoverNa
 
     const [solValue, setSolValue] = useState<number | ''>('')
     const [error, setError] = useState<string>('')
+
+    const { t } = useTranslation()
 
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,11 +37,12 @@ const SettingsMars: FC<SettingsMarsProps> = ({ totalSolCount, setSol, setRoverNa
         }
     }
 
-
     return (
         <div className={cls.settingsContainer}>
             <div className={cls.setSolContainer}>
-                <label className={cls.solInputLabel}>{`Please set date from 0 to ${totalSolCount}`}</label>
+                <label className={cls.solInputLabel}>
+                    {t('Please set date from 0 to {{count}}', { count: totalSolCount })}
+                </label>
                 <div className={cls.solInputContainer}>
                     <input type="text" className={cls.solInput} onChange={(e) => { handleChange(e) }} />
                     <Button className={cls.solInputBtn} onClick={saveSol}>Set</Button>
@@ -49,7 +53,7 @@ const SettingsMars: FC<SettingsMarsProps> = ({ totalSolCount, setSol, setRoverNa
             </div>
             <div>
                 <div className={cls.setSolContainer}>
-                    <label className={cls.solInputLabel}>Select rover</label>
+                    <label className={cls.solInputLabel}>{t('Select rover')}</label>
                     <select className={cls.roverSelect} onChange={(e) => setRoverName(e.target.value)}>
                         <option value="curiosity">Curiosity</option>
                         <option value="perseverance">Perseverance</option>

@@ -1,4 +1,8 @@
 {
     "Main page": "Main page",
-    "About": "About"
+    "Mars": "Mars",
+    "Planets":"Planets",
+    "You can choose other dates and get new images.": "You can choose other dates and get new images.",
+    "Please set date from 0 to {{count}}": "Please set date from 0 to {{count}}",
+    "Select rover": "Select rover"
 }

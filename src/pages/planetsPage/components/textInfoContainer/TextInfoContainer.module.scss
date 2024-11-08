@@ -1,0 +1,23 @@
+@import '../../../../../global.scss';
+
+.textInfoContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textInfoWrapper{
+    display: flex;
+    width: 50%;
+    border: 1px solid white;
+    color: $header-text-color
+}
+
+.textInfoName{
+    width: 70%;
+    border-right: 1px solid white;
+}
+
+.textInfoValue{
+text-align: center;
+}

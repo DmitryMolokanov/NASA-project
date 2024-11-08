@@ -10,6 +10,7 @@ const Navbar = () => {
         <div className={cls.navbar}>
             <AppLink to={'/main_page'} ClassName={cls.link}>{t("Main page")}</AppLink>
             <AppLink to={'/mars_page'} ClassName={cls.link}>{t("Mars")}</AppLink>
+            <AppLink to={'/planet_page'} ClassName={cls.link}>{t("Planets")}</AppLink>
         </div>
     )
 };

@@ -1,0 +1,22 @@
+@import '../../../global.scss';
+
+.planetMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(100vh - $header-height);
+}
+
+.planetInfoContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 94%;
+    height: 94%;
+}
+.settingContainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%; 
+    padding: 20px 0px;
+}

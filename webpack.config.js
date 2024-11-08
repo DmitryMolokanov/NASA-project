@@ -3,6 +3,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ProgressPlugin = require('progress-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack')
 const dotenv = require('dotenv');
 dotenv.config();
@@ -51,6 +52,10 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.mp4$/,
+                use: 'file-loader?name=videos/[name].[ext]',
+            },
         ],
     },
     plugins: [
@@ -65,7 +70,12 @@ module.exports = {
         new ProgressPlugin(true),
         new webpack.DefinePlugin({
             'process.env': JSON.stringify(process.env)
-        })
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: 'public/locales', to: 'locales' },
+            ],
+        }),
     ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.json']
