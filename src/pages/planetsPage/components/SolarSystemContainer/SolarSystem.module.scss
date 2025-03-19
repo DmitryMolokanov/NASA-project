@@ -1,0 +1,174 @@
+@import "../../../../../global.scss";
+
+$initialWidth: 50px;
+$initialHeight: 50px;
+
+$planetSize: 40px;
+
+%planetContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid $header-text-color;
+  border-radius: 50%;
+}
+
+.componentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sunContainer {
+  width: $planetSize;
+  height: $planetSize;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mercuryOrbit {
+  @extend %planetContainer;
+  width: calc($initialWidth + 100px);
+  height: calc($initialHeight + 100px);
+
+  .mercuryContainer {
+    position: absolute;
+    top: calc(0px - $planetSize / 2);
+    width: $planetSize;
+    height: $planetSize;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.venusOrbit {
+  @extend %planetContainer;
+  width: calc($initialWidth + 150px);
+  height: calc($initialHeight + 150px);
+
+  .venusContainer {
+    position: absolute;
+    right: calc(0px - $planetSize / 2);
+    width: $planetSize;
+    height: $planetSize;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.earthOrbit {
+  @extend %planetContainer;
+  width: calc($initialWidth + 200px);
+  height: calc($initialHeight + 200px);
+
+  .earthContainer {
+    position: absolute;
+    bottom: calc(0px - $planetSize / 2);
+    width: $planetSize;
+    height: $planetSize;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.marsOrbit {
+  @extend %planetContainer;
+  width: calc($initialWidth + 250px);
+  height: calc($initialHeight + 250px);
+
+  .marsContainer {
+    position: absolute;
+    left: calc(0px - $planetSize / 2);
+    width: $planetSize;
+    height: $planetSize;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.jupiterOrbit {
+  @extend %planetContainer;
+  width: calc($initialWidth + 300px);
+  height: calc($initialHeight + 300px);
+
+  .jupiterContainer {
+    position: absolute;
+    top: calc(0px - $planetSize / 2);
+    width: $planetSize;
+    height: $planetSize;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.saturnOrbit {
+  @extend %planetContainer;
+  width: calc($initialWidth + 350px);
+  height: calc($initialHeight + 350px);
+
+  .saturnContainer {
+    position: absolute;
+    right: calc(0px - $planetSize / 2);
+    width: $planetSize;
+    height: $planetSize;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.uranusOrbit {
+  @extend %planetContainer;
+  width: calc($initialWidth + 400px);
+  height: calc($initialHeight + 400px);
+
+  .uranusContainer {
+    position: absolute;
+    bottom: calc(0px - $planetSize / 2);
+    width: $planetSize;
+    height: $planetSize;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.neptuneOrbit {
+  @extend %planetContainer;
+  width: calc($initialWidth + 450px);
+  height: calc($initialHeight + 450px);
+
+  .neptuneContainer {
+    position: absolute;
+    left: calc(0px - $planetSize / 2);
+    width: $planetSize;
+    height: $planetSize;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

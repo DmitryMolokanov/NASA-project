@@ -1,22 +1,54 @@
-@import '../../../global.scss';
+@import "../../../global.scss";
 
 .planetMainContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: calc(100vh - $header-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
-.planetInfoContainer{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 94%;
-    height: 94%;
+.planetInfoContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 95%;
+  height: calc(100vh - $header-height - 80px);
 }
-.settingContainer{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%; 
-    padding: 20px 0px;
+.settingContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.componentContainer {
+  background-color: red;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.textVideoContainer {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  background-color: black;
+  border-radius: 10px;
+  video {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+.infoContainer {
+  height: 50%;
+}
+
+.info {
+  margin: 20px 0px 0px 20px;
+
+  table {
+    color: $header-text-color;
+  }
 }

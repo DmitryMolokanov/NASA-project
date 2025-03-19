@@ -1,17 +1,17 @@
-@import '../../../global.scss';
+@import "../../../global.scss";
 
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: $header-height;
-    background-color:$prime-header-bgcolor;
-    color: $header-text-color;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: $header-height;
+  background-color: $prime-header-bgcolor;
+  color: $header-text-color;
 }
 
-.menuContainer{
-    display: flex;
-    justify-content: space-between;
-    width: 20%;
+.menuContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
 }
