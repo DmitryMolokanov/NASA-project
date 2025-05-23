@@ -1,0 +1,11 @@
+.footerContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--footer-height);
+  color: var(--light-color);
+  background-color: var(--prime-bgcolor);
+  border-top: 1px solid gray;
+  padding-left: 20px;
+  margin-top: 20px;
+}

@@ -1,13 +1,11 @@
-@import "../../../global.scss";
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: $header-height;
-  background-color: $prime-header-bgcolor;
-  color: $header-text-color;
+  height: var(--header-height);
+  background-color: var(--prime-bgcolor);
+  color: var(var(--light-color));
 }
 
 .menuContainer {

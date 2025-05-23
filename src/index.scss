@@ -1,17 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
-@import "../global.scss";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-html,body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Libre Franklin", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    background-color: $prime-header-bgcolor
+:root {
+  --prime-bgcolor: rgb(44, 44, 44);
+  --light-color: rgb(226, 226, 226);
+  --color-hover-red: rgb(241, 72, 72);
+  //size
+  --header-height: 80px;
+  --footer-height: 80px;
 }
 
-
-
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  background-color: var(--prime-bgcolor);
+}

@@ -1,5 +1,3 @@
-@import "../../../../global.scss";
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,6 +7,6 @@
 .link {
   color: lightgray;
   &:hover {
-    color: $color-hover-red;
+    color: var(--color-hover-red);
   }
 }

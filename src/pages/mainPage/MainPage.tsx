@@ -1,16 +1,12 @@
-import React from 'react'
-import Header from '../../components/Header/Header';
-import ContentContainer from './components/ContentContainer/contentContainer';
-
+import React from "react";
+import ContentContainer from "./components/ContentContainer/contentContainer";
 
 const MainPage = () => {
-
-    return (
-        <div>
-            <Header />
-            <ContentContainer />
-        </div>
-    )
+  return (
+    <div>
+      <ContentContainer />
+    </div>
+  );
 };
 
-export default MainPage
+export default MainPage;

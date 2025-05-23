@@ -62,7 +62,6 @@ const PlanetsPage = () => {
 
   return (
     <div>
-      <Header />
       <div className={cls.planetMainContainer}>
         <div className={cls.planetInfoContainer}>
           <SolarSystem selectPlanet={selectPlanet} />
