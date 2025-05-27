@@ -1,33 +1,40 @@
-import React, { useEffect, useState } from 'react'
-import cls from './MainMarsContainer.module.scss'
-import { IMarsPhoto } from "../../../../types/mars"
-
+import React from "react";
+import cls from "./MainMarsContainer.module.scss";
+import { IMarsPhoto } from "../../../../types/mars";
 
 interface MainMarsContainerProps {
-    marsPhoto: IMarsPhoto[]
-    setSelectPhoto: (el: IMarsPhoto) => void
-    setIsShown: (el: boolean) => void
+  marsPhoto: IMarsPhoto[];
+  setSelectPhoto: (el: IMarsPhoto) => void;
+  setIsShown: (el: boolean) => void;
 }
 
-const MainMarsContainer = ({ marsPhoto, setSelectPhoto, setIsShown }: MainMarsContainerProps) => {
+const MainMarsContainer = ({
+  marsPhoto,
+  setSelectPhoto,
+  setIsShown,
+}: MainMarsContainerProps) => {
+  const selectPhoto = (photo: IMarsPhoto) => {
+    setSelectPhoto(photo);
+    setIsShown(true);
+  };
 
-    const selectPhoto = (photo: IMarsPhoto) => {
-        setSelectPhoto(photo)
-        setIsShown(true)
-    }
-
-    return (
-        <div>
-            <div className={cls.photoContainer}>
-                {marsPhoto.map((item) => {
-                    return <div className={cls.photo} key={item.id} onClick={() => selectPhoto(item)}>
-                        <img src={item.img_src} alt="mars_img" />
-                    </div>
-                })}
-
+  return (
+    <div>
+      <div className={cls.photoContainer}>
+        {marsPhoto.map((item) => {
+          return (
+            <div
+              className={cls.photo}
+              key={item.id}
+              onClick={() => selectPhoto(item)}
+            >
+              <img src={item.img_src} alt="mars_img" />
             </div>
-        </div >
-    )
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
-export default MainMarsContainer
+export default MainMarsContainer;

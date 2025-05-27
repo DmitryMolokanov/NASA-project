@@ -36,6 +36,7 @@ const MarsPage = () => {
     if (result.photos.length) {
       setMarsPhoto(result.photos);
       setNoPhoto(false);
+      console.log(result);
       setTotalSolCount(result.photos[0].rover.max_sol);
     } else setNoPhoto(true);
     setLoading(false);
@@ -66,9 +67,11 @@ const MarsPage = () => {
         setRoverName={setRoverName}
       />
       {!noPhoto ? (
-        <>
+        <div className={cls.marsPageContainer}>
           {loading ? (
-            <Loader />
+            <div className={cls.marsPageLoader}>
+              <Loader />
+            </div>
           ) : (
             <>
               <MainMarsContainer
@@ -97,7 +100,7 @@ const MarsPage = () => {
               </div>
             </>
           )}
-        </>
+        </div>
       ) : loading ? (
         <Loader />
       ) : (

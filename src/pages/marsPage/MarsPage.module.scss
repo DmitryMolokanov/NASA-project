@@ -1,62 +1,72 @@
-.button{
-    color: white;
-    padding: 5px 10px;
-    border: 1px solid white;
-    list-style-type:none;
-    cursor: pointer;
-    &:hover{
-        background-image:linear-gradient(to left,rgb(241, 72, 72), royalblue);
-    }
+.button {
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid white;
+  list-style-type: none;
+  cursor: pointer;
+  &:hover {
+    background-image: linear-gradient(to left, rgb(241, 72, 72), royalblue);
+  }
 }
 
-.containerPaginationComponent{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.marsPageContainer {
+  // вычитаем помомо хедера и футера еше и высоту настроек
+  min-height: calc(100vh - var(--header-height) - var(--footer-height) - 100px);
 }
 
-.paginationContainer{
-    display: flex;
-    flex-direction: row;
-    width: 300px;
+.marsPageLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // вычитаем помомо хедера и футера еше и высоту настроек
+  min-height: calc(100vh - var(--header-height) - var(--footer-height) - 100px);
 }
 
-.pageClassName{
-    display: flex;
-    list-style-type:none;
+.containerPaginationComponent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.pageLinkClassName{
-    @extend .button;
-   
+.paginationContainer {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
 }
 
-.previousClassName{
-    @extend .button
+.pageClassName {
+  display: flex;
+  list-style-type: none;
 }
 
-.nextClassName{
-    @extend .button
+.pageLinkClassName {
+  @extend .button;
+}
+
+.previousClassName {
+  @extend .button;
+}
+
+.nextClassName {
+  @extend .button;
 }
 
 .breakClassName {
+  background-color: white;
+  list-style-type: none;
+}
+
+.active {
+  background-color: royalblue;
+
+  &:hover {
     background-color: white;
-    list-style-type:none;
-
+    color: black;
+  }
 }
 
-.active{
-    background-color: royalblue;
-    
-
-    &:hover{
-        background-color: white;
-        color: black;
-    }
-
-}
-
-.noPhotos{
-    color:white
+.noPhotos {
+  color: white;
 }

@@ -7,7 +7,6 @@ import PlanetsPage from "../pages/planetsPage/PlanetsPage";
 import AppLayout from "../layouts/AppLayout";
 
 const routes = [
-  { path: "/", element: <FirstPage /> },
   { path: "/main_page", element: <MainPage /> },
   { path: "/mars_page", element: <MarsPage /> },
   { path: "/planet_page", element: <PlanetsPage /> },
@@ -16,6 +15,7 @@ const routes = [
 const Router = () => {
   return (
     <Routes>
+      <Route path="/" element={<FirstPage />} />
       {routes.map((route) => {
         return (
           <Route

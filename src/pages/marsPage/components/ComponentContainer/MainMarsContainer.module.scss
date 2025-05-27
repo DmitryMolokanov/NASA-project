@@ -1,19 +1,18 @@
-.photoContainer{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    cursor: pointer;
-    .photo{
-        width: 250px;
-        height: 250px;
-        img{
-            width: 100%;
-            height: 100%;
-        }
-        &:hover{
-            box-shadow: 0px 0px 5px 1px white;
-        }
+.photoContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: pointer;
+  .photo {
+    width: 250px;
+    height: 250px;
+    img {
+      width: 100%;
+      height: 100%;
     }
-   
+    &:hover {
+      box-shadow: 0px 0px 5px 1px white;
+    }
+  }
 }
