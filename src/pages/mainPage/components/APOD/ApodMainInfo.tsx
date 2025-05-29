@@ -18,9 +18,6 @@ const ApodMainInfo = ({ apodData }: ApodMainInfoProps) => {
 
   return (
     <div className={cls.apodContainer}>
-      <div className={cls.explanation}>
-        <span>{apodData?.explanation}</span>
-      </div>
       <div className={cls.urlContainer}>
         {apodData?.media_type !== "video" ? (
           <Button className={cls.zoomImg} onClick={handleZoom}>
@@ -35,6 +32,9 @@ const ApodMainInfo = ({ apodData }: ApodMainInfoProps) => {
             <img src={apodData?.url} alt="Astronomy Picture of the Day" />
           </div>
         )}
+      </div>
+      <div className={cls.explanation}>
+        <p>{apodData?.explanation}</p>
       </div>
       <Modal isShown={zoomImg} setIsShow={setZoomImg}>
         <img src={apodData?.url} alt="Astronomy Picture of the Day" />

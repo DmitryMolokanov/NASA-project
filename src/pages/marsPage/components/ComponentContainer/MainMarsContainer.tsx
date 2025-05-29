@@ -28,7 +28,7 @@ const MainMarsContainer = ({
               key={item.id}
               onClick={() => selectPhoto(item)}
             >
-              <img src={item.img_src} alt="mars_img" />
+              <img src={item.img_src} alt="mars_img" loading="lazy" />
             </div>
           );
         })}

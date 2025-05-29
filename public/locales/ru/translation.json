@@ -1,8 +1,8 @@
- {
-    "Main page": "Главная",
-    "Mars": "Марс",
-    "Planets":"Планеты",
-    "You can choose other dates and get new images.": "Вы можете выбрать другую дату и получить новое изображение.",
-    "Please set date from 0 to {{count}}": "Пожалуйста, установите дату от 0 до {{count}}",
-    "Select rover": "Выбрать марсоход"
- }
+{
+  "Main page": "Главная",
+  "Mars": "Марс",
+  "Planets": "Планеты",
+  "You can choose other dates and get new images.": "Вы можете выбрать другую дату и получить новое изображение.",
+  "Please set date from 0 to {{count}}": "Пожалуйста, установите дату от 0 до {{count}}",
+  "Select rover": "Выбрать марсоход"
+}

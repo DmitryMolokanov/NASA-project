@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import cls from "./SettingsMars.module.scss";
 import Button from "../../../../components/Button/Button";
 import { useTranslation } from "react-i18next";
+import helpIcon from "../../../../../public/assets/img/help.png";
 
 interface SettingsMarsProps {
   totalSolCount: number;
@@ -20,9 +21,9 @@ const SettingsMars: FC<SettingsMarsProps> = ({
   const { t } = useTranslation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const regex = /^[0-9]+$/gm;
     const value = e.target.value;
-    if (!regex.test(value)) {
+    const regex = /^[0-9]+$/gm;
+    if (!regex.test(value) && value !== "") {
       setError("the value can only contain numbers");
     } else setError("");
     if (+value > totalSolCount) {
@@ -42,8 +43,12 @@ const SettingsMars: FC<SettingsMarsProps> = ({
     <div className={cls.settingsContainer}>
       <div className={cls.setSolContainer}>
         <label className={cls.solInputLabel}>
-          {t("Please set date from 0 to {{count}}", { count: totalSolCount })}
+          {t("Please set sol")}
+          <div className={cls.labelHelpContainer}>
+            <img src={helpIcon} alt="help" width={18} height={18} />
+          </div>
         </label>
+
         <div className={cls.solInputContainer}>
           <input
             type="text"
@@ -71,9 +76,7 @@ const SettingsMars: FC<SettingsMarsProps> = ({
             <option value="perseverance">Perseverance</option>
           </select>
         </div>
-        <div className={cls.errContainer}>
-          {error && <span className={cls.errValue}>{error}</span>}
-        </div>
+        <div className={cls.errContainer}></div>
       </div>
     </div>
   );

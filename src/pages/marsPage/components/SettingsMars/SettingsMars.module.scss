@@ -12,8 +12,18 @@
 }
 
 .solInputLabel {
+  display: flex;
+  justify-content: center;
   color: white;
   padding: 5px;
+  gap: 10px;
+  .labelHelpContainer {
+    cursor: pointer;
+    img {
+      border-radius: 50%;
+      background-color: white;
+    }
+  }
 }
 
 .solInputContainer {
