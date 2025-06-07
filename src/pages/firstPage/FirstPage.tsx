@@ -58,6 +58,12 @@ const FirstPage = () => {
   }, []);
   return (
     <div className={cls.canvas} ref={mountRef}>
+      <div className={cls.message}>
+        <span> This is 3D model</span>
+        <div className={cls.arrow}>
+          <div className={cls.pointer}></div>
+        </div>
+      </div>
       <AppLink className={cls.link} to={"/main_page"}>
         NASA PROJECT
       </AppLink>
